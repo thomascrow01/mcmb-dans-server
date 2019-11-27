@@ -1,0 +1,145 @@
+Luigi_Fireball:
+  Cooldown: 4
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=40}
+  - skill{s=Sound_Fireball_Launch}
+  - missile{ot=Luigi_Fireball_Tick;oh=Luigi_Fireball_Hit;v=4;i=1;hR=1;vR=1;syo=1;MaxDuration=60;in=20} @target
+Luigi_Fireball_Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#3adb16;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=reddust;color=#76f25a;amount=5;speed=0;hS=0.15;vS=0.15} @origin
+  - effect:particles{p=reddust;color=#acff99;amount=2;speed=0;hS=0.1;vS=0.1} @origin
+Luigi_Fireball_Hit:
+  Skills:
+  - skill{s=Sound_Fireball_Hit}
+  - effect:particles{p=reddust;color=#3adb16;a=200;hS=1;vS=1}
+  - effect:particles{p=reddust;color=#76f25a;a=150;hS=0.6;vS=0.6}
+  - effect:particles{p=reddust;color=#acff99;a=50;hS=0.3;vS=0.3}
+  - damage{a=6}
+  
+Luigi_Green_Missile:
+  Cooldown: 8
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=30}
+  - skill{s=Sound_Luigi_Green_Missile}
+  - effect:particles{p=lava}
+  - damage{a=6} @PlayersInRadius{r=1.5}
+  - leap{v=300} @target
+  - delay 5
+  - skill{s=Sound_Fireball_Hit}
+  - effect:particles{p=reddust;color=#3adb16;a=200;hS=1;vS=1} @self
+  - effect:particles{p=reddust;color=#76f25a;a=150;hS=0.6;vS=0.6} @self
+  - effect:particles{p=reddust;color=#acff99;a=50;hS=0.3;vS=0.3} @self
+  - damage{a=6} @PlayersInRadius{r=1.5}
+  
+Luigi_Green_Missile_Missfire:
+  Cooldown: 16
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=30}
+  - skill{s=Sound_Luigi_Green_Missile_Missfire}
+  - effect:particles{p=lava}
+  - damage{a=12} @PlayersInRadius{r=2}
+  - leap{v=300} @target
+  - delay 5
+  - skill{s=Sound_Fireball_Hit}
+  - effect:particles{p=reddust;color=#3adb16;a=400;hS=2;vS=2} @self
+  - effect:particles{p=reddust;color=#76f25a;a=300;hS=1.2;vS=1.2} @self
+  - effect:particles{p=reddust;color=#acff99;a=100;hS=0.6;vS=0.6} @self
+  - damage{a=12} @PlayersInRadius{r=3}
+  
+Luigi_Super_Jump_Punch:
+  Cooldown: 16
+  Conditions:
+  - offgcd
+  - playerwithin{d=1.5}
+  Skills:
+  - gcd{ticks=20}
+  - damage{a=12} @PlayersInRadius{r=1.5}
+  - skill{s=Sound_Luigi_Super_Jump_Punch}
+  - potion{t=SLOW_FALLING;d=60;l=1;force=true} @self
+  - jump{v=1} @self
+  - effect:particlering{p=reddust;color=#eff235;r=0.5;points=32}
+  - delay 1
+  - effect:particlering{p=reddust;color=#eff235;r=1;points=32}
+  - delay 1
+  - effect:particlering{p=reddust;color=#eff235;r=1.5;points=32}
+  
+Luigi_Luigi_Cyclone:
+  Cooldown: 8
+  Conditions:
+  - playerwithin{d=5}
+  - offgcd
+  Skills:
+  - gcd{ticks=90}
+  - effect:spin{duration=90;velocity=40} @self
+  - skill{s=Sound_Luigi_Luigi_Cyclone} @self
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 10
+  - damage{a=1} @PlayersInRadius{r=1.5}
+  - pull{velocity=4} @PlayersInRadius{r=4}
+  - effect:particles{p=explosion;hs=1;vs=0.1;a=150;y=1} @self
+  - delay 5
+  - effect:particles{p=explosion;hs=1.5;vs=1.5;a=300;y=1} @self
+  - throw{velocity=15;velocityY=1} @PlayersInRadius{r=5}
+  
+Luigi_Negative_Zone:
+  Skills:
+  - gcd{ticks=180}
+  - delay 120
+  - skill{s=Smash_Final_Smash_Trigger}
+  - delay 60
+  - lightning{d=0} @self
+  - potion{t=SLOW;l=1;d=600} @PlayersInRadius{r=10}
+  - potion{t=CONFUSION;l=1;d=600} @PlayersInRadius{r=10}
+  - potion{t=SLOW_FALLING;l=1;d=600} @PlayersInRadius{r=10}
+  - potion{t=SLOW_DIGGING;l=1;d=600} @PlayersInRadius{r=10}
+  - potion{t=BLINDNESS;l=1;d=600} @PlayersInRadius{r=10}
+  - delay 10
+  - effect:particlesphere{p=spell_mob_ambient;color=#dbff94;radius=10;a=50000} @self
+  - delay 10
+  - effect:particlesphere{p=spell_mob_ambient;color=#dbff94;radius=10;a=50000} @self
+  - delay 10
+  - effect:particlesphere{p=spell_mob_ambient;color=#dbff94;radius=10;a=50000} @self
+
+  
+  

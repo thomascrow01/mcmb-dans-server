@@ -1,0 +1,7 @@
+Smash_Final_Smash_Trigger:
+  Skills:
+  - lightning{d=0} @self
+  - effect:particles{p=lava;a=3;hS=1;vS=1}
+  - potion{t=GLOWING;d=60;force=true} @self
+  - potion{t=SLOW;d=60;l=4;force=true} @self
+  - potion{t=DAMAGE_RESISTANCE;d=60;force=true;l=2} @self

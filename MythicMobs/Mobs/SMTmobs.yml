@@ -1,0 +1,89 @@
+Missle:
+  Type: SKELETON
+  Display: 'Missle'
+  Health: 100
+  Damage: 15
+  Equipment:
+  - demifiendhead HEAD
+  Skills:
+  - skill{s=JavelinRain} ~onTimer:50
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+  BossBar:
+    Enabled: true
+    Title: 'Missle'
+    Range: 10
+    Color: RED
+    DarkenSky: true
+
+Matador:
+  Type: SKELETON
+  Display: 'Matador'
+  Health: 300
+  Damage: 10
+  Disguise:
+    Type: Player
+    Player: Matador
+    Skin: Joestaen
+  Equipment:
+  - IRON_SWORD OFFHAND
+  - RED_BANNER HAND
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=RedCapote} ~onTimer:100
+  - skill{s=Mazan}
+  - skill{s=Dekunda_SLOW} ~onTimer:20
+  - skill{s=Dekunda_WEAKNESS} ~onTimer:20
+  - skill{s=Focus} ~onTimer:100
+  - skill{s=Andalucia} =1%-25%
+  - skill{s=Taunt} =1%-25%
+  - skill{s=BeastEye} =1%-25%
+  - message{m="<<mob.name>> Impressive... But, the moment of truth is beyond your grasp..."} @PlayersInRadius{r=10} =25%
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 golems
+  Drops:
+  - candelbrum 1 1
+  BossBar:
+    Enabled: true
+    Title: 'Matador'
+    Range: 10
+    Color: RED
+    DarkenSky: true
+    
+Trumpeter:
+  Type: PHANTOM
+  Display: 'Trumpeter'
+  Health: 600
+  Damage: 15
+  Disguise:
+    Type: Player
+    Player: Trumpeter
+    Skin: Joestaen
+    Gliding: true
+  Options:
+    PreventSunburn: true
+    PreventRandomEquipment: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 golems
+  BossBar:
+    Enabled: true
+    Title: 'Trumpeter'
+    Range: 10
+    Color: RED
+    DarkenSky: true
+  Drops:
+  - candelbrum 1 1
+  Modules:
+    ThreatTable: true
+  Skills:
+    - skill{s=Mazandyne}

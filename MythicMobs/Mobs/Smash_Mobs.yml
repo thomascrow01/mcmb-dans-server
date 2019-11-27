@@ -1,0 +1,156 @@
+Mario:
+  Type: SKELETON
+  Display: "Mario"
+  Health: 150
+  Damage: 4
+  Disguise:
+    Type: Player
+    Player: "&c Mario "
+    Skin: therealmario
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+  Skills:
+  - skill{s=Mario_Fireball} @target ~onTimer:100 0.5 =25%-100%
+  - skill{s=Mario_Fireball} @target ~onTimer:50 0.9 =1%-25%
+  - skill{s=Mario_Jump} @self ~onTimer:20 0.2
+  - skill{s=Mario_Cape} @target ~onAttack 0.5
+  - skill{s=Mario_Fludd} @target ~onDamaged 0.3 =25%-100%
+  - skill{s=Mario_Fludd} @target ~onDamaged 1 =1%-25%
+  - skill{s=Mario_Mario_Finale} @PlayersInRadius{r=50} =25%
+  KillMessages:
+  - "<target.name> was KO'd by Mario"
+  DamageModifiers:
+  - FALL 0
+  BossBar:
+    Enabled: true
+    Title: '&cMario'
+    Range: 50
+    Color: RED
+  Modules:
+    ThreatTable: true
+    
+Luigi:
+  Type: SKELETON
+  Health: 150
+  Damage: 3
+  Disguise:
+    Type: Player
+    Player: "&2 Luigi "
+    Skin: mario
+  Skills:
+  - skill{s=Luigi_Fireball} @target ~onTimer:100 0.5
+  - skill{s=Luigi_Green_Missile} ~onTimer:20 0.2
+  - skill{s=Luigi_Green_Missile_Missfire} ~onTimer:20 0.02
+  - skill{s=Luigi_Super_Jump_Punch} ~onDamaged 0.2
+  - skill{s=Luigi_Luigi_Cyclone} ~onTimer:40 0.2
+  - skill{s=Luigi_Negative_Zone} @PlayersInRadius{r=50} =25%
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+  KillMessages:
+  - "<target.name> was KO'd by Luigi"
+  DamageModifiers:
+  - FALL 0
+  BossBar:
+    Enabled: true
+    Title: '&2Luigi'
+    Range: 50
+    Color: GREEN
+  Modules:
+    ThreatTable: true
+    
+Link:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&b Link "
+    Skin: botwlink
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+Samus:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&4 Samus "
+    Skin: f
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+ 
+DK:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&e Donkey Kong "
+    Skin: donkey_kong
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+Ness:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&d Ness "
+    Skin: pkfire
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+HIYAH:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&6 Fox "
+    Skin: starfox64
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+Yoshi:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&a Yoshi "
+    Skin: yoshi
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+Falcon:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&6 Cpt. Falcon "
+    Skin: forwardaerial
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+Pikachu:
+  Type: ZOMBIE
+  Disguise:
+    Type: Player
+    Player: "&e Pikachu "
+    Skin: pikachu__
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    
+Kirby:
+  Type: SILVERFISH
+  Display: "Dinnerbone"
+  Silent: true
+  Equipment: 
+  - KirbyHead HEAD
+  Disguise:
+    Type: Wither_Skeleton
+    Invisible: true
+  Options:
+    PreventRandomEquipment: true
+    PreventSunburn: true
+  
+  

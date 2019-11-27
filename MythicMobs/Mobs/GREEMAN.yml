@@ -1,0 +1,17 @@
+BenGreeman:
+  Type: COW
+  Display: '&2Ben Greeman'
+  Health: 50
+  BossBar:
+    Enabled: true
+    Title: 'Ben Greeman'
+    Range: 50
+    Color: GREEN
+    Style: SEGMENTED_10
+    DarkenSky: true
+  Skills:
+  - skill{s=FireballWave} ~onTimer:100
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  

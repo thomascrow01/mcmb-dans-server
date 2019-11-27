@@ -1,0 +1,78 @@
+Mario_Fireball:
+  Cooldown: 1
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=30}
+  - skill{s=Sound_Fireball_Launch}
+  - projectile{onTick=Mario_Fireball_Tick;onHit=Mario_Fireball_Hit;v=8;i=1;hR=1;vR=1}
+  - delay 20
+  - skill{s=Sound_Fireball_Launch}
+  - projectile{onTick=Mario_Fireball_Tick;onHit=Mario_Fireball_Hit;v=8;i=1;hR=1;vR=1}
+Mario_Fireball_Tick:
+  Skills:
+  - effect:particles{p=flame;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+Mario_Fireball_Hit:
+  Skills:
+  - skill{s=Sound_Fireball_Hit}
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - damage{a=4}
+  
+Mario_Jump:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=20}
+  - skill{s=Sound_Boing}
+  - effect:particlering{particle=cloud;r=1.5}
+  - jump{velocity=0.6}
+  - damage{a=4} @PlayersInRadius{r=1.5}
+
+Mario_Cape:
+  Condtions:
+  - offgcd
+  Condtions:
+  - playerwithin{d=1.5} true
+  Skills:
+  - effect:spin{duration=10;velocity=10} @PlayersInRadius{r=1.5}
+  - skill{s=Sound_Slide_Up}
+  
+Mario_Fludd:
+  Cooldown: 8
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=60}
+  - skill{s=Sound_Mario_Fludd_Spray}
+  - projectile{onTick=Mario_Fludd_Tick;onHit=Mario_Fludd_Hit;v=10;i=1;hR=1;vR=1}
+Mario_Fludd_Tick:
+  Skills:
+  - effect:particles{p=wake;amount=50;speed=0;hS=0.1;vS=0.1} @origin
+Mario_Fludd_Hit:
+  Skills:
+  - effect:particles{p=wake;amount=2000;speed=0;hS=1;vS=1} @target
+  - skill{s=Sound_Mario_Fludd_Hit}
+  - throw{velocity=15;velocityY=5} @target
+  
+Mario_Mario_Finale:
+  Skills:
+  - gcd{ticks=180}
+  - delay 120
+  - skill{s=Smash_Final_Smash_Trigger}
+  - delay 60
+  - lightning{d=0} @self
+  - skill{s=Sound_Fireball_Launch}
+  - missile{ot=Mario_Mario_Finale_Tick;oh=Mario_Mario_Finale_Hit;v=6;i=1;hR=1;vR=1;syo=1;md=200} @PlayersInRadius{r=50}
+  
+Mario_Mario_Finale_Tick:
+  Skills:
+  - effect:particlesphere{particle=flame;amount=50;radius=1}
+  - effect:particles{p=lava;a=3;hS=1.5;vS=1.5}
+  
+Mario_Mario_Finale_Hit:
+  Skills:
+  - skill{s=Sound_Fireball_Hit}
+  - effect:particles{p=lava;a=50;hS=2;vS=2}
+  - damage{a=10}
+  - throw{velocity=15;velocityY=5} @target
+  

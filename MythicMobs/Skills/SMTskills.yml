@@ -1,0 +1,276 @@
+JavelinRain:
+  Cooldown: 10
+  Skills:
+  - effect:particles{p=snow_shovel;a=200;hs=1;y=1} @self
+  - delay 20
+  - effect:particles{p=lava;a=10;hS=1;vS=1} @self
+  - missile{ot=JavelinRain_TICK;oh=JavelinRain_HIT;v=6;i=1;hR=1;vR=1;in=10;syo=1} @PlayersInRadius{r=10}
+  - delay 5
+  
+  - effect:particles{p=lava;a=10;hS=1;vS=1} @self
+  - missile{ot=JavelinRain_TICK;oh=JavelinRain_HIT;v=6;i=1;hR=1;vR=1;in=10;syo=3} @PlayersInRadius{r=10}
+  - delay 5
+  
+  - effect:particles{p=lava;a=10;hS=1;vS=1} @self
+  - missile{ot=JavelinRain_TICK;oh=JavelinRain_HIT;v=6;i=1;hR=1;vR=1;in=10;syo=5} @PlayersInRadius{r=10}
+  - delay 5
+  
+  - effect:particles{p=lava;a=10;hS=1;vS=1} @self
+  - missile{ot=JavelinRain_TICK;oh=JavelinRain_HIT;v=6;i=1;hR=1;vR=1;in=10;syo=3} @PlayersInRadius{r=10}
+  
+JavelinRain_TICK:
+  Skills:
+  - effect:particles{p=flame;a=1} @origin
+
+JavelinRain_HIT:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.generic.explode;v=1;p=0}
+  - damage{a=1;i=false}
+  
+GreenCastSelf:
+  Skills:
+  - effect:particlering{particle=reddust;radius=1.3;points=32;amount=1;hS=1;vS=0;color=#15e8db} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1.1;points=32;amount=1;hS=1;vS=0;y=0.1;color=#33cc99} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1;points=32;amount=1;hS=1;vS=0;y=0.3;color=#ccff66} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1;points=32;amount=1;hS=1;vS=0;y=0.5;color=#ccff66} @self
+  - effect:particlering{particle=reddust;radius=1;points=32;amount=1;hS=1;vS=0;y=0.8;color=#ccff66} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1.1;points=16;amount=1;hS=1;vS=0;y=1.1;color=#33cc99} @self
+  - effect:particlering{particle=reddust;radius=1.3;points=8;amount=1;hS=1;vS=0;y=1.4;color=#15e8db} @self
+
+GreenCastRadius:
+  Skills:
+  - effect:particlering{particle=reddust;radius=1.3;points=32;amount=1;hS=1;vS=0;color=#15e8db} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1.1;points=32;amount=1;hS=1;vS=0;y=0.1;color=#33cc99} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1;points=32;amount=1;hS=1;vS=0;y=0.3;color=#ccff66} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1;points=32;amount=1;hS=1;vS=0;y=0.5;color=#ccff66} @EntitiesInRadius{r=10;types=players,golems}
+  - effect:particlering{particle=reddust;radius=1;points=32;amount=1;hS=1;vS=0;y=0.8;color=#ccff66} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1.1;points=16;amount=1;hS=1;vS=0;y=1.1;color=#33cc99} @EntitiesInRadius{r=10;types=players,golems}
+  - effect:particlering{particle=reddust;radius=1.3;points=8;amount=1;hS=1;vS=0;y=1.4;color=#15e8db} @EntitiesInRadius{r=10;types=players,golems}
+  
+BlueCastSelf:
+  Skills:
+  - effect:particlering{particle=reddust;radius=1.3;points=16;amount=1;hS=1;vS=0;color=#38D2DE} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1.1;points=14;amount=1;hS=1;vS=0;y=0.1;color=#38BBDE} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1;points=12;amount=1;hS=1;vS=0;y=0.3;color=#38A2DE} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1;points=12;amount=1;hS=1;vS=0;y=0.5;color=#388BDE} @self
+  - effect:particlering{particle=reddust;radius=1;points=10;amount=1;hS=1;vS=0;y=0.8;color=#38A2DE} @self
+  - delay 1
+  - effect:particlering{particle=reddust;radius=1.1;points=7;amount=1;hS=1;vS=0;y=1.1;color=#38BBDE} @self
+  - effect:particlering{particle=reddust;radius=1.3;points=4;amount=1;hS=1;vS=0;y=1.4;color=#38D2DE} @self
+  
+BlueSphereRadius:
+  Skills:
+  - effect:particlesphere{particle=reddust;amount=200;r=2;color=#38D2DE} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=180;r=1.8;color=#38BBDE} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=160;r=1.6;color=#38A2DE} @EntitiesInRadius{r=10;types=players,golems}
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=140;r=1.4;color=#388BDE} @EntitiesInRadius{r=10;types=players,golems}
+  
+YellowCastSelf:
+  Skills:
+  - effect:particlesphere{particle=reddust;amount=200;r=1.5;color=#fcba03;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=300;r=1.5;color=#e6a900;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=400;r=1.5;color=#dba309;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=100;r=1.7;color=#fcba03;y=0.5} @Self
+  - delay 1 
+  - effect:particlesphere{particle=reddust;amount=80;r=2;color=#e6a900;y=0.5} @Self
+  - delay 1 
+  - effect:particlesphere{particle=reddust;amount=40;r=2.3;color=#fcba03;y=0.5} @Self
+  
+BeastEyeCast:
+  Skills:
+  - sound{s=block.note_block.chime} @self
+  - effect:particlesphere{particle=reddust;amount=40;r=2.3;color=#fcba03;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=80;r=2;color=#db7209;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=160;r=1.8;color=#db0909;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=200;r=1.7;color=#e01473;y=0.5} @Self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=200;r=1.6;color=#e014b0;y=0.5} @Self
+  - sound{s=entity.lightning_bolt.thunder} @self
+  
+  
+MatadorLaugh:
+  Skills:
+  - effect:spin{duration=10;velocity=40} @self
+  - sound{s=entity.pillager.ambient} @self
+  - delay 5
+  - sound{s=entity.pillager.ambient} @self
+  - delay 5
+  - sound{s=entity.pillager.ambient} @self
+  
+  
+RedCapote:
+  Cooldown: 35
+  Conditions:
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Red Capote"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - sound{s=block.ender_chest.open} @self
+  - skill{s=GreenCastSelf} @self
+  - potion{type=SPEED;duration=600;level=2} @self
+  
+  
+Focus:
+  Cooldown: 20
+  Conditions:
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Focus"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - sound{s=block.slime_block.break}
+  - skill{s=GreenCastSelf}
+  - potion{type=INCREASE_DAMAGE;duration=40;level=2} @self
+  
+Taunt:
+  Cooldown: 13
+  Conditions:
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Taunt"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - skill{s=BlueCastSelf}
+  - delay 10
+  - skill{s=BlueSphereRadius}
+  - potion{type=DAMAGE_RESISTANCE;duration=300;level=-10} @EntitiesInRadius{r=10;types=players,golems}
+  - potion{type=INCREASE_DAMAGE;duration=300;level=1} @EntitiesInRadius{r=10;types=players,golems}
+  
+Dekunda_SLOW:
+  Cooldown: 8
+  Conditions:
+    - haspotioneffect SLOW true
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Dekunda"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - skill{s=GreenCastSelf} @self
+  - delay 10
+  - skill{s=YellowCastSelf} @self
+  - sound{s=block.glass.break} @self
+  - command{c="execute as <mob.uuid> run effect clear <mob.uuid> minecraft:weakness"} @self
+  - command{c="execute as <mob.uuid> run effect clear <mob.uuid> minecraft:slowness"} @self
+  
+Dekunda_WEAKNESS:
+  Cooldown: 8
+  Conditions:
+    - haspotioneffect WEAKNESS true
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Dekunda"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - skill{s=GreenCastSelf} @self
+  - delay 10
+  - skill{s=YellowCastSelf} @self
+  - sound{s=block.glass.break} @self
+  - command{c="execute as <mob.uuid> run effect clear <mob.uuid> minecraft:weakness"} @self
+  - command{c="execute as <mob.uuid> run effect clear <mob.uuid> minecraft:slowness"} @self
+  
+Mazan:
+  Cooldown: 10
+  Conditions:
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Mazan"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - sound{s=entity.blaze.shoot} @self
+  - skill{s=GreenCastSelf}
+  - delay 10
+  - skill{s=GreenCastRadius}
+  - damage{a=6;i=false} @EntitiesInRadius{r=10;types=players,golems}
+  
+Andalucia:
+  Cooldown: 15
+  Conditions:
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Andalucia"} @PlayersInRadius{r=10}
+  - effect:spin{duration=10;velocity=40} @self
+  - sound{s=entity.pillager.hurt} @self
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=1;y=1.1} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  - delay 5
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=1;y=1.1} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  - delay 5
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=1;y=1.1} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  - delay 5
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=1;y=1.1} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  - delay 5
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=1;y=1.1} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  - delay 5
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=;y=1.11} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  - delay 5
+  - teleport{spreadh=1;spreadv=0} @EntitiesInRadius{r=5;limit=1;sort=RANDOM;types=players,golems}
+  - effect:particles{p=explosion_large;amount=1} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - effect:particles{p=sweep_attack;amount=1;y=1.1} @self
+  - damage{a=5} @EntitiesInRadius{r=2;limit=1;sort=NEAREST;types=players,golems}
+  - sound{s=entity.blaze.shoot} @self
+  
+BeastEye:
+  Cooldown: 30
+  Skills:
+  - message{m="<mob.name> uses Beast Eye"} @PlayersInRadius{r=10}
+  - skill{s=MatadorLaugh}
+  - skill{s=BeastEyeCast}
+  - gcd{ticks=0}
+  
+Mazandyne:
+  Cooldown: 10
+  Conditions:
+    - offgcd
+  Skills:
+  - gcd{ticks=160}
+  - message{m="<mob.name> uses Mazandyne"} @PlayersInRadius{r=10}
+  - skill{s=GreenCastSelf}
+  - delay 10
+  - skill{s=GreenCastRadius}
+  - damage{a=15;i=false} @EntitiesInRadius{r=10;types=players,golems}

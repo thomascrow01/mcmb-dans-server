@@ -1,0 +1,15 @@
+HeadlessHorseman_Chestplate:
+  Id: LEATHER_CHESTPLATE
+  Enchantments:
+  - DAMAGE_ALL:1
+HeadlessHorseman_Boots:
+  Id: LEATHER_BOOTS
+  Enchantments:
+  - DAMAGE_ALL:1
+  Options:
+    Color: 0,0,0
+HeadlessHorseman_Axe:
+  Id: STONE_AXE
+  Enchantments:
+  - DAMAGE_ALL:1
+  

@@ -1,0 +1,88 @@
+Sound_Slide_Up:
+  Skills:
+  - sound{s=block.note_block.flute;p=1} @self
+  - delay 1
+  - sound{s=block.note_block.flute;p=1.3} @self
+  - delay 1
+  - sound{s=block.note_block.flute;p=1.6} @self
+  - delay 1
+  - sound{s=block.note_block.flute;p=2} @self
+  
+Sound_Fireball_Launch:
+  Skills:
+  - sound{s=entity.ghast.shoot} @self
+  
+Sound_Fireball_Hit:
+  Skills:
+  - sound{s=entity.generic.explode} @origin
+  
+Sound_Mario_Fludd_Spray:
+  Skills:
+  - sound{s=entity.generic.extinguish_fire} @origin
+ 
+Sound_Mario_Fludd_Hit:
+  Skills:
+  - sound{s=entity.generic.splash} @origin
+  
+Sound_Boing:
+  Skills:
+  - sound{s=item.trident.hit_ground} @self
+  
+Sound_Luigi_Green_Missile:
+  Skills:
+  - sound{s=entity.firework_rocket.launch} @self
+
+Sound_Luigi_Green_Missile_Missfire:
+  Skills:
+  - sound{s=entity.firework_rocket.launch;p=1} @self
+  - delay 1
+  - sound{s=entity.firework_rocket.launch;p=1.2} @self
+  - delay 1
+  - sound{s=entity.firework_rocket.launch;p=1.4} @self
+  - delay 1
+  - sound{s=entity.firework_rocket.launch;p=1.6} @self
+  
+Sound_Luigi_Super_Jump_Punch:
+  Skills:
+  - sound{s=block.anvil.land;p=0.5}
+  - skill{s=Sound_Luigi_Green_Missile_Missfire}
+
+Sound_Luigi_Luigi_Cyclone:
+  Skills:
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=1.7}
+  - delay 5
+  - sound{s=entity.ghast.shoot;p=0.7}
